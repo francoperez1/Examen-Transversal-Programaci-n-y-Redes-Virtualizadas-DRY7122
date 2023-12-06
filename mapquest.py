@@ -1,12 +1,18 @@
 import urllib.parse
 import requests
+from datetime import datetime
 
 main_api = "https://www.mapquestapi.com/directions/v2/route?"
 key = "0ELbYtjcTZejmde2tO3AR7jMtIA6wdpj"
 consumo_combustible_estimado = 9.0  
 
 
+
 while True:
+    hora = datetime.now()
+    HF = hora.strftime("%H:%M")
+    print ("bienvenido a Mapquest",HF)
+
     orig = input("Ubicación de inicio: ")
     if orig.lower() in ["quit", "q", "s"]:
         break
